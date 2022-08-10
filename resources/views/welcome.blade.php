@@ -4,18 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <link rel="icon" src=> --}}
-    <link rel = "icon" type = "image/png" href = "{{asset('images/id.png')}}" class="">
+    <link rel="icon" type="image/png" href="{{asset('images/tabimg.png')}}" class="">
     <title>IshworDeep</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
+        body {
+            background: #1B2430;
+        }
+
         button {
             opacity: .5;
             transition: opacity .5s ease-in-out;
         }
+
         button:hover {
             opacity: 1;
         }
@@ -98,7 +100,7 @@
 
     </style>
 </head>
-<body class="bg-dark text-light ">
+<body class=" text-light ">
     <div class="container ">
         <div class="row">
             <div class="col-12 flex-end text-light d-flex justify-content-end mt-2">
@@ -113,11 +115,17 @@
         <h1 class="text-focus-in">Ishwor Deep</h1>
         <p>Hello World !</p>
         <div class="mt-4">
-            <a href="https://www.facebook.com/ishwordeep"><button class="btn btn-primary"><i class="fa-brands fa-facebook"></i></button></a>
-            <a href="https://www.instagram.com/ishwordeep/"><button class="btn btn-primary"><i class="fa-brands fa-instagram"></i></button></a>
-            <a href="https://github.com/ishwordeep"><button class="btn btn-primary"><i class="fa-brands fa-github"></i></button></a>
+            <a href="https://www.facebook.com/ishwordeep"><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa-brands fa-facebook"></i></button></a>
+            <a href="https://www.instagram.com/ishwordeep/"><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa-brands fa-instagram"></i></button></a>
+            <a href="https://github.com/ishwordeep"><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa-brands fa-github"></i></button></a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+    </script>
 </body>
 </html>
