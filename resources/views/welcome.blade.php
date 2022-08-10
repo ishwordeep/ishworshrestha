@@ -7,24 +7,101 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        img,button {
+        img,
+        button {
             opacity: .75;
             transition: opacity .5s ease-in-out;
         }
 
-        img:hover,button:hover {
+        img:hover,
+        button:hover {
             opacity: 1;
         }
-       
+
+        .text-focus-in {
+            -webkit-animation: text-focus-in 2s cubic-bezier(.645, .045, .355, 1.000) forwards;
+            animation: text-focus-in 1.5s cubic-bezier(.645, .045, .355, 1.000) forwards
+        }
+
+        .swing-in-top-fwd {
+            -webkit-animation: swing-in-top-fwd 4s cubic-bezier(.175, .885, .32, 1.275) both;
+            animation: swing-in-top-fwd 3s cubic-bezier(.175, .885, .32, 1.275) both
+        }
+
+
+        @-webkit-keyframes text-focus-in {
+            0% {
+                -webkit-filter: blur(12px);
+                filter: blur(12px);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-filter: blur(0);
+                filter: blur(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes text-focus-in {
+            0% {
+                -webkit-filter: blur(12px);
+                filter: blur(12px);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-filter: blur(0);
+                filter: blur(0);
+                opacity: 1
+            }
+        }
+
+
+        @-webkit-keyframes swing-in-top-fwd {
+            0% {
+                -webkit-transform: rotateX(-100deg);
+                transform: rotateX(-100deg);
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                opacity: 1
+            }
+        }
+
+        @keyframes swing-in-top-fwd {
+            0% {
+                -webkit-transform: rotateX(-100deg);
+                transform: rotateX(-100deg);
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                opacity: 1
+            }
+        }
 
     </style>
 </head>
 <body class="bg-dark text-light ">
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <div style="width: 150px;">
-            <img src="{{asset('images/id.png')}}" alt="Ishwor deep" class="img-thumbnail rounded-circle ">
+            <img src="{{asset('images/id.png')}}" alt="Ishwor deep" class="swing-in-top-fwd img-thumbnail rounded-circle ">
         </div>
-        <h1>Ishwor Deep</h1>
+        <h1 class="text-focus-in">Ishwor Deep</h1>
         <p>Hello World !</p>
         <div class="mt-4">
             <a href="https://www.facebook.com/ishwordeep"><button class="btn btn-primary"><i class="fa-brands fa-facebook"></i></button></a>
